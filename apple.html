@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple - Điện thoại & Phụ kiện chính hãng | PhoneShop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="header-left">
+                        <a href="#"><i class="fas fa-phone"></i> hotline: 0962371176</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Tìm cửa hàng</a>
+                    </div>
+                    <div class="header-right">
+                        <a href="dangky.html" id=""><i class="fas fa-user"></i> Đăng nhập</a>
+                        <a href="tra_cuu_dh.html"><i class="fas fa-receipt"></i> Tra cứu đơn hàng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-main">
+            <div class="container">
+                <div class="header-main-content">
+                    <div class="logo">
+                        <a href="index.html">
+                          
+                            <span><img src="logo_LQT1.png" alt="" width="70px"></span>
+                        </a>
+                    </div>
+                    
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm điện thoại, phụ kiện...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <a href="wishlist.html" class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                            <span class="badge">0</span>
+                        </a>
+                        <a href="cart.html" class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="dienthoai.html"><i class="fas fa-mobile-alt"></i> Điện thoại</a></li>                
+                    <li><a href="phukien.html"><i class="fas fa-headphones"></i> Phụ kiện</a></li>
+                    <li><a href="thucudoimoi.html"><i class="fas fa-empire"></i> Thu cũ đổi mới</a></li>
+                    <li><a href="voucher.html"><i class="fa fa-gamepad" aria-hidden="true"></i> chơi tạo voucher</a></li>
+                    <li class="hot"><a href="khuyenmai.html"><i class="fas fa-fire"></i> Khuyến mãi</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Trang chủ</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Apple</span>
+    </div>
+  </div>
+
+  <!-- Main layout -->
+  <section class="products-page">
+    <div class="container">
+      <div class="products-layout">
+        <!-- Sidebar Filter -->
+        <aside class="filter-sidebar">
+          <div class="filter-box">
+            <h3><i class="fab fa-apple"></i> Lọc sản phẩm Apple</h3>
+
+            <div class="filter-group">
+              <h4>Mức giá</h4>
+              <label><input type="radio" name="price" value="duoi15"> Dưới 15 triệu</label>
+              <label><input type="radio" name="price" value="15-25"> 15–25 triệu</label>
+              <label><input type="radio" name="price" value="tren25"> Trên 25 triệu</label>
+            </div>
+
+            <div class="filter-group">
+              <h4>Loại sản phẩm</h4>
+              <label><input type="checkbox" value="iphone"> iPhone</label>
+              <label><input type="checkbox" value="ipad"> iPad</label>
+              <label><input type="checkbox" value="airpods"> AirPods</label>
+              <label><input type="checkbox" value="watch"> Apple Watch</label>
+            </div>
+            <div class="filter-group mb-4">
+              <h4 class="mb-3">Dung lượng</h4>
+              <div class="form-check">
+                <input type="checkbox" value="128gb" id="storage1">
+                <label for="storage1">128GB</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" value="256gb" id="storage2">
+                <label for="storage2">256GB</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" value="512gb" id="storage3">
+                <label for="storage3">512GB</label>
+              </div>
+            </div>
+
+            <button class="w-100 bg-primary text-white py-2 rounded" id="applyFilter">Áp dụng bộ lọc</button>
+          </div>
+        </aside>
+
+        <!-- Products -->
+        <div>
+          <div class="products-toolbar">
+            <span class="result-count">Hiển thị 8 sản phẩm</span>
+            <div class="toolbar-right">
+              <select class="sort-select" id="sortSelect">
+                <option value="default">Sắp xếp</option>
+                <option value="low">Giá thấp → cao</option>
+                <option value="high">Giá cao → thấp</option>
+                <option value="new">Mới nhất</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="product-grid" id="productList">
+            
+
+            <!-- Sản phẩm 8 -->
+            <div class="col">
+              <div class="product-card bg-white rounded shadow-sm overflow-hidden">
+                <div class="product-image position-relative">
+                  <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=500" class="img-fluid" alt="Apple Watch Series 9"></a>
+                  <button class="quick-view position-absolute bottom-0 end-0 m-2 btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></button>
+                </div>
+                <div class="product-info p-3">
+                  <h3 class="fs-5 mb-2">Apple Watch Series 9</h3>
+                  <div class="product-rating mb-2">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <span>(789 đánh giá)</span>
+                  </div>
+                  <div class="product-price mb-2">
+                    <span class="price-new fs-4 text-danger">9.990.000₫</span>
+                  </div>
+                  <button class="btn btn-cart btn-primary w-100"><i class="fas fa-shopping-cart me-2"></i> Thêm vào giỏ</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sản phẩm 9 -->
+            <div class="col">
+              <div class="product-card bg-white rounded shadow-sm overflow-hidden">
+                <div class="product-image position-relative">
+                  <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?w=500" class="img-fluid" alt="iPad Air 5"></a>
+                  <button class="quick-view position-absolute bottom-0 end-0 m-2 btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></button>
+                </div>
+                <div class="product-info p-3">
+                  <h3 class="fs-5 mb-2">iPad Air 5 256GB</h3>
+                  <div class="product-rating mb-2">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                    <span>(345 đánh giá)</span>
+                  </div>
+                  <div class="product-price mb-2">
+                    <span class="price-new fs-4 text-danger">17.990.000₫</span>
+                  </div>
+                  <button class="btn btn-cart btn-primary w-100"><i class="fas fa-shopping-cart me-2"></i> Thêm vào giỏ</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sản phẩm 10 -->
+            <div class="col">
+              <div class="product-card bg-white rounded shadow-sm overflow-hidden">
+                <div class="product-image position-relative">
+                  <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1617802690658-1173a812650d?w=500" class="img-fluid" alt="iPhone 15"></a>
+                  <button class="quick-view position-absolute bottom-0 end-0 m-2 btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></button>
+                </div>
+                <div class="product-info p-3">
+                  <h3 class="fs-5 mb-2">iPhone 15 128GB</h3>
+                  <div class="product-rating mb-2">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <span>(678 đánh giá)</span>
+                  </div>
+                  <div class="product-price mb-2">
+                    <span class="price-new fs-4 text-danger">19.990.000₫</span>
+                    <span class="price-old text-muted text-decoration-line-through ms-2">22.990.000₫</span>
+                  </div>
+                  <button class="btn btn-cart btn-primary w-100"><i class="fas fa-shopping-cart me-2"></i> Thêm vào giỏ</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sản phẩm 11 -->
+            <div class="col">
+              <div class="product-card bg-white rounded shadow-sm overflow-hidden">
+                <div class="product-image position-relative">
+                  <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=500" class="img-fluid" alt="AirPods 3"></a>
+                  <button class="quick-view position-absolute bottom-0 end-0 m-2 btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></button>
+                </div>
+                <div class="product-info p-3">
+                  <h3 class="fs-5 mb-2">AirPods 3</h3>
+                  <div class="product-rating mb-2">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <span>(890 đánh giá)</span>
+                  </div>
+                  <div class="product-price mb-2">
+                    <span class="price-new fs-4 text-danger">4.490.000₫</span>
+                  </div>
+                  <button class="btn btn-cart btn-primary w-100"><i class="fas fa-shopping-cart me-2"></i> Thêm vào giỏ</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sản phẩm 12 -->
+            <div class="col">
+              <div class="product-card bg-white rounded shadow-sm overflow-hidden">
+                <div class="product-image position-relative">
+                  <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=500" class="img-fluid" alt="Apple Watch SE"></a>
+                  <button class="quick-view position-absolute bottom-0 end-0 m-2 btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i></button>
+                </div>
+                <div class="product-info p-3">
+                  <h3 class="fs-5 mb-2">Apple Watch SE 2023</h3>
+                  <div class="product-rating mb-2">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                    <span>(456 đánh giá)</span>
+                  </div>
+                  <div class="product-price mb-2">
+                    <span class="price-new fs-4 text-danger">6.990.000₫</span>
+                  </div>
+                  <button class="btn btn-cart btn-primary w-100"><i class="fas fa-shopping-cart me-2"></i> Thêm vào giỏ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <!-- <nav aria-label="Page navigation" class="mt-4">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled"><a class="page-link" href="#">Trước</a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+            </ul>
+          </nav> -->
+          <nav class="pagination">
+            <a class="page-link" href="#">Trước</a>
+            <a class="page-link active" href="#">1</a>
+            <a class="page-link" href="#">2</a>
+            <a class="page-link" href="#">3</a>
+            <a class="page-link" href="#">Sau</a>
+          </nav>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h4>Về PhoneShop</h4>
+                    <ul>
+                        <li><a href="about-us.html">Giới thiệu công ty</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Chính sách</h4>
+                    <ul>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách vận chuyển</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hỗ trợ khách hàng</h4>
+                    <ul>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Hướng dẫn thanh toán</a></li>
+                        <li><a href="tra_cuu_dh.html">Tra cứu đơn hàng</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kết nối với chúng tôi</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/quoctri.le.319"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@lqt254"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Desginer by lê quốc trí D22_TH14. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+  <script>
+    // 🔍 Tìm kiếm sản phẩm theo tên
+    const searchInput = document.getElementById('searchInput');
+    const productList = document.getElementById('productList');
+    searchInput.addEventListener('keyup', function () {
+      const filter = searchInput.value.toLowerCase();
+      const cards = productList.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        const name = card.querySelector('h3').textContent.toLowerCase();
+        card.style.display = name.includes(filter) ? '' : 'none';
+      });
+    });
+
+    // 🔽 Sắp xếp sản phẩm
+    document.getElementById('sortSelect').addEventListener('change', function() {
+      const sortValue = this.value;
+      const cards = Array.from(productList.querySelectorAll('.product-card'));
+      cards.sort((a, b) => {
+        const priceA = parseInt(a.querySelector('.price-new').textContent.replace(/\D/g, ''));
+        const priceB = parseInt(b.querySelector('.price-new').textContent.replace(/\D/g, ''));
+        if (sortValue === 'low') return priceA - priceB;
+        if (sortValue === 'high') return priceB - priceA;
+        return 0;
+      });
+      cards.forEach(c => productList.appendChild(c));
+    });
+  </script>
+
+</body>
+</html>

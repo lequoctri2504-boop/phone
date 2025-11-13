@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tra cứu đơn hàng - PhoneShop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="header-left">
+                        <a href="#"><i class="fas fa-phone"></i> hotline: 0962371176</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Tìm cửa hàng</a>
+                    </div>
+                    <div class="header-right">
+                        <a href="dangky.html" id=""><i class="fas fa-user"></i> Đăng nhập</a>
+                        <a href="tra_cuu_dh.html"><i class="fas fa-receipt"></i> Tra cứu đơn hàng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-main">
+            <div class="container">
+                <div class="header-main-content">
+                    <div class="logo">
+                        <a href="index.html">
+                          
+                            <span><img src="logo_LQT1.png" alt="" width="70px"></span>
+                        </a>
+                    </div>
+                    
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm điện thoại, phụ kiện...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <a href="wishlist.html" class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                            <span class="badge">0</span>
+                        </a>
+                        <a href="cart.html" class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="dienthoai.html"><i class="fas fa-mobile-alt"></i> Điện thoại</a></li>                
+                    <li><a href="phukien.html"><i class="fas fa-headphones"></i> Phụ kiện</a></li>
+                    <li><a href="thucudoimoi.html"><i class="fas fa-empire"></i> Thu cũ đổi mới</a></li>
+                    <li><a href="voucher.html"><i class="fa fa-gamepad" aria-hidden="true"></i> chơi tạo voucher</a></li>
+                    <li class="hot"><a href="khuyenmai.html"><i class="fas fa-fire"></i> Khuyến mãi</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Trang chủ</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Tra cứu đơn hàng</span>
+    </div>
+  </div>
+
+  <!-- Order Tracking -->
+  <section class="order-tracking">
+
+    <!-- <div class="container">
+      <h1><i class="fas fa-receipt"></i> Kiểm Tra Bảo Hành IMEI</h1>
+
+       <form class="tracking-form">
+        <div class="form-group">
+          <label for="order-code">Mã emei của máy(6 số đuôi)</label>
+          <input type="text" id="order-code" class="form-control" placeholder="VD: 855444 hoặc AER856" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-large">
+          <i class="fas fa-search"></i> Tra cứu
+        </button>
+      </form>
+     <input type="text" id="imei" placeholder="Nhập IMEI thiết bị" />
+      <button onclick="checkWarranty()">Kiểm tra</button>
+    
+    
+      <div id="result" class="result"></div>
+
+    </div> -->
+
+    <div class="container">
+      <h2><i class="fas fa-receipt"></i> Kiểm Tra Bảo Hành IMEI</h2><br>
+      <input type="text" id="imei" placeholder="Nhập IMEI thiết bị" />
+      <button onclick="checkWarranty()">  Kiểm tra</button>
+      
+    
+    
+      <div id="result" class="result"></div>
+    </div>
+    <br>
+
+    <div class="container">
+      <h1><i class="fas fa-receipt"></i> Tra Cứu Đơn Hàng</h1>
+      <p>Nhập mã đơn hàng hoặc số điện thoại / email của bạn để kiểm tra tình trạng đơn hàng.</p>
+
+      <form class="tracking-form">
+        <div class="form-group">
+          <label for="order-code">Mã đơn hàng hoặc SĐT/Email</label>
+          <input type="text" id="order-code" class="form-control" placeholder="VD: DH123456 hoặc 0962xxxxxx" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-large">
+          <i class="fas fa-search"></i> Tra cứu
+        </button>
+      </form>
+
+      <!-- Result (Demo) -->
+      <div class="tracking-result">
+        <h2>Kết quả tra cứu</h2>
+        <div class="order-card">
+          <div class="order-header">
+            <strong>Đơn hàng #DH123456</strong>
+            <span class="order-status status-shipping">Đang giao</span>
+          </div>
+          <div class="order-body">
+            <p><strong>Khách hàng:</strong> Nguyễn Văn A</p>
+            <p><strong>Ngày đặt:</strong> 10/12/2024</p>
+            <p><strong>Tổng tiền:</strong> 28.990.000₫</p>
+            <p><strong>Phương thức thanh toán:</strong> COD</p>
+          </div>
+          <div class="order-progress">
+            <ul>
+              <li class="done">Đã xác nhận</li>
+              <li class="done">Đang chuẩn bị hàng</li>
+              <li class="active">Đang giao</li>
+              <li>Hoàn tất</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h4>Về PhoneShop</h4>
+                    <ul>
+                        <li><a href="about-us.html">Giới thiệu công ty</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Chính sách</h4>
+                    <ul>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách vận chuyển</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hỗ trợ khách hàng</h4>
+                    <ul>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Hướng dẫn thanh toán</a></li>
+                        <li><a href="tra_cuu_dh.html">Tra cứu đơn hàng</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kết nối với chúng tôi</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/quoctri.le.319"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@lqt254"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Desginer by lê quốc trí D22_TH14. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+   <script>
+  function checkWarranty() {
+    const imei = document.getElementById('imei').value.trim();
+    const resultBox = document.getElementById('result');
+
+    if (!imei) {
+      resultBox.style.display = 'block';
+      resultBox.innerHTML = '⚠️ Vui lòng nhập IMEI!';
+      return;
+    }
+
+    // Dữ liệu demo — bạn có thể thay bằng API thật
+    const fakeResult = {
+      imei: imei,
+      product: 'iPhone 13 Pro Max 256GB',
+      owner: 'Nguyễn Văn A',
+      buyDate: '15/02/2024',
+      price: '28.900.000₫',
+      status: 'Còn bảo hành',
+      expire: '15/02/2026'
+    };
+
+    resultBox.style.display = 'block';
+    resultBox.innerHTML = `
+      <b>📱 Thông tin bảo hành:</b><br><br>
+      IMEI: <b>${fakeResult.imei}</b><br>
+      Sản phẩm: <b>${fakeResult.product}</b><br>
+      Người mua: <b>${fakeResult.owner}</b><br>
+      Ngày mua: <b>${fakeResult.buyDate}</b><br>
+      Giá mua: <b>${fakeResult.price}</b><br>
+      Trạng thái bảo hành: <b>${fakeResult.status}</b><br>
+      Hết hạn bảo hành: <b>${fakeResult.expire}</b>
+    `;
+  }
+</script>
+
+    
+  <style>
+    .tracking-form { max-width: 500px; margin: 30px auto; text-align: center; }
+    .tracking-result { margin-top: 40px; background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 30px; }
+    .order-progress ul { display: flex; justify-content: space-between; list-style: none; padding: 0; margin-top: 20px; }
+    .order-progress li { position: relative; flex: 1; text-align: center; padding: 10px; border-top: 3px solid #ccc; }
+    .order-progress li.done { border-color: #28a745; color: #28a745; }
+    .order-progress li.active { border-color: #ffc107; color: #ffc107; font-weight: bold; }
+
+    
+  </style>
+</body>
+</html>

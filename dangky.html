@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký - PhoneShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="header-left">
+                        <a href="#"><i class="fas fa-phone"></i> hotline: 0962371176</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Tìm cửa hàng</a>
+                    </div>
+                    <div class="header-right">
+                        <a href="dangnhap.html"><i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="container">
+                <div class="header-main-content">
+                    <div class="logo">
+                        <a href="index.html">
+                          
+                            <span><img src="logo_LQT1.png" alt="" width="70px"></span>
+                        </a>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Trang chủ</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Đăng ký</span>
+        </div>
+    </div>
+
+    <!-- Registration Form -->
+    <section class="registration-form">
+        <div class="container">
+            <h1>Đăng Ký Tài Khoản</h1>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Họ và Tên</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Xác nhận Mật khẩu</label>
+                    <input type="password" id="confirm_password" name="confirm_password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Đăng Ký</button>
+            </form>
+            <p>Đã có tài khoản? <a href="dangnhap.html">Đăng nhập ngay</a></p>
+        </div>
+    </section>
+
+   
+
+</body>
+</html>

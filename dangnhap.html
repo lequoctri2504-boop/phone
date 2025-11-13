@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - PhoneShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="header-left">
+                        <a href="#"><i class="fas fa-phone"></i> hotline: 0962371176</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Tìm cửa hàng</a>
+                    </div>
+                    <div class="header-right">
+                        <a href="dangky.html"><i class="fas fa-user-plus"></i> Đăng ký</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="container">
+                <div class="header-main-content">
+                    <div class="logo">
+                        <a href="index.html">
+                          
+                            <span><img src="logo_LQT1.png" alt="" width="70px"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Trang chủ</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Đăng nhập</span>
+        </div>
+    </div>
+
+    <!-- Login Form -->
+    <section class="login-form">
+        <div class="container">
+            <h1>Đăng Nhập Tài Khoản</h1>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Đăng Nhập</button>
+            </form>
+            <p>Chưa có tài khoản? <a href="dangky.html">Đăng ký ngay</a></p>
+            <br>
+             <div class="divider">
+                <span>HOẶC</span>
+            </div>
+
+            <!-- Google and Facebook Login Buttons -->
+            <div class="social-login-buttons">
+                <button class="btn btn-google" onclick="googleLogin()">
+                    <i class="fab fa-google"></i> Đăng nhập với Google
+                </button>
+                <button class="btn btn-facebook" onclick="facebookLogin()">
+                    <i class="fab fa-facebook"></i> Đăng nhập với Facebook
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+
+</body>
+</html>
