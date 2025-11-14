@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Điện thoại - Điện thoại & Phụ kiện chính hãng | PhoneShop</title>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS của bạn (style.css) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top-content d-flex justify-content-between align-items-center">
+          <div class="header-left d-flex gap-3">
+            <a href="#"><i class="fas fa-phone"></i> hotline: 0962371176</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Tìm cửa hàng</a>
+          </div>
+          <div class="header-right d-flex gap-3">
+            <a href="dangky.html"><i class="fas fa-user"></i> Đăng nhập</a>
+            <a href="tra_cuu_dh.html"><i class="fas fa-receipt"></i> Tra cứu đơn hàng</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container">
+        <div class="header-main-content d-flex align-items-center justify-content-between gap-4">
+          <div class="logo">
+            <a href="index.html"><img src="logo_LQT1.png" alt="PhoneShop" width="70px"></a>
+          </div>
+          <div class="search-box flex-grow-1 d-flex border border-primary rounded overflow-hidden">
+            <input type="text" id="searchInput" class="form-control border-0" placeholder="Tìm điện thoại, iPhone, Samsung, Xiaomi...">
+            <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+          </div>
+          <div class="header-actions d-flex gap-3">
+            <a href="wishlist.html" class="wishlist-btn position-relative">
+              <i class="far fa-heart fs-4"></i>
+              <span class="badge bg-danger position-absolute top-0 start-100 translate-middle">0</span>
+            </a>
+            <a href="cart.html" class="cart-btn position-relative">
+              <i class="fas fa-shopping-cart fs-4"></i>
+              <span class="badge bg-danger position-absolute top-0 start-100 translate-middle">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar bg-primary">
+      <div class="container">
+        <ul class="nav-menu d-flex list-unstyled gap-2 m-0">
+          <li><a href="dienthoai.html" class="text-white px-3 py-2"><i class="fas fa-mobile-alt"></i> Điện thoại</a></li>
+          <li><a href="phukien.html" class="text-white px-3 py-2"><i class="fas fa-headphones"></i> Phụ kiện</a></li>
+          <li><a href="thucudoimoi.html" class="text-white px-3 py-2"><i class="fas fa-empire"></i> Thu cũ đổi mới</a></li>
+          <li><a href="voucher.html" class="text-white px-3 py-2"><i class="fa fa-gamepad"></i> chơi tạo voucher</a></li>
+          <li class="hot"><a href="khuyenmai.html" class="text-white px-3 py-2 bg-primary-dark"><i class="fas fa-fire"></i> Khuyến mãi</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb bg-light py-3">
+  
+    <!-- <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Điện thoại</li>
+          </ol>
+        </nav>
+      </div> -->
+  
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="index.html">Trang chủ</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Điện thoại</span>
+      </div>
+    </div>
+  
+  </div>
+
+   <!-- Banner Slider -->
+    <section class="banner-slider">
+        <div class="container">
+            <div class="slider-wrapper">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&h=400&fit=crop" alt="Banner 1">
+                    <div class="slide-content">
+                        <h2>iPhone 17 Pro Max</h2>
+                        <p>Titanium. Mạnh mẽ. Nhẹ hơn bao giờ hết</p>
+                        <a href="product-detail.html" class="btn btn-primary">Xem ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Danh sách sản phẩm - ĐẸP, CHUYÊN NGHIỆP, NHIỀU DÒNG -->
+  <section class="products-page py-5 bg-light">
+    <div class="container">
+       <div class="products-toolbar d-flex justify-content-between align-items-center mb-4 bg-white p-3 rounded shadow-sm">
+        <span class="result-count fs-5 fw-bold">Hiển thị <span id="productCount">15</span> / 120 sản phẩm</span>
+        <div class="toolbar-right d-flex gap-2">
+          <select class="form-select rounded-pill" id="sortSelect">
+            <option value="default">Sắp xếp mặc định</option>
+            <option value="low">Giá thấp → cao</option>
+            <option value="high">Giá cao → thấp</option>
+            <option value="new">Mới nhất</option>
+          </select>
+          <button class="btn btn-outline-primary rounded-pill"><i class="fas fa-th-large"></i></button>
+          <button class="btn btn-primary rounded-pill"><i class="fas fa-th-list"></i></button>
+        </div>      
+      </div>
+
+      <!-- iPhone nổi bật -->
+      <div class="section-header mb-4 d-flex justify-content-between align-items-center">
+        <h2 class="d-flex align-items-center text-primary">
+          <i class="fab  fa-apple me-2 fs-3"></i> iPhone Chính Hãng
+        </h2>
+        <a href="#iphoneList" class="text-decoration-none text-primary fw-bold">Xem tất cả →</a>
+      </div>
+      <div class="product-grid row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4 mb-5" id="iphoneList">
+        <!-- 5 iPhone nổi bật -->
+        <div class="col">
+          <div class="product-card bg-white rounded-3 shadow-sm overflow-hidden border-0 transition hover-lift">
+            <div class="product-badge bg-danger text-white position-absolute top-0 start-0 m-2 px-2 py-1 rounded-pill small fw-bold">HOT</div>
+            <div class="product-image position-relative overflow-hidden">
+              <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1592286927505-128d151c5874?w=500" class="img-fluid transition" alt="iPhone 15 Pro Max"></a>
+              <button class="quick-view position-absolute bottom-0 start-50 translate-middle-x btn btn-light btn-sm rounded-pill shadow-sm"><i class="fas fa-eye"></i></button>
+            </div>
+            <div class="product-info p-3">
+              <h3 class="fs-6 fw-bold mb-1 text-truncate">iPhone 15 Pro Max 256GB</h3>
+              <div class="product-rating mb-1 small text-warning">
+                ★★★★☆ <span class="text-muted">(234)</span>
+              </div>
+              <div class="product-price mb-2">
+                <span class="price-new fs-5 text-danger fw-bold">28.990.000₫</span>
+                <span class="price-old text-muted small text-decoration-line-through ms-1">33.990.000₫</span>
+              </div>
+              <div class="d-flex gap-1">
+                <button class="btn btn-primary flex-grow-1 btn-sm rounded-pill"><i class="fas fa-shopping-cart me-1"></i> Thêm</button>
+                <button class="btn btn-outline-danger btn-sm rounded-pill"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- iPhone 15 Pro -->
+        <div class="col">
+          <div class="product-card bg-white rounded-3 shadow-sm overflow-hidden border-0 transition hover-lift">
+            <div class="product-badge bg-success text-white position-absolute top-0 start-0 m-2 px-2 py-1 rounded-pill small fw-bold">NEW</div>
+            <div class="product-image position-relative overflow-hidden">
+              <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1592750477367-5e7b3d29e6b7?w=500" class="img-fluid transition" alt="iPhone 15 Pro"></a>
+              <button class="quick-view position-absolute bottom-0 start-50 translate-middle-x btn btn-light btn-sm rounded-pill shadow-sm"><i class="fas fa-eye"></i></button>
+            </div>
+            <div class="product-info p-3">
+              <h3 class="fs-6 fw-bold mb-1 text-truncate">iPhone 15 Pro 128GB</h3>
+              <div class="product-rating mb-1 small text-warning">
+                ★★★★☆ <span class="text-muted">(189)</span>
+              </div>
+              <div class="product-price mb-2">
+                <span class="price-new fs-5 text-danger fw-bold">24.990.000₫</span>
+              </div>
+                <div class="d-flex gap-1">
+                <button class="btn btn-primary flex-grow-1 btn-sm rounded-pill"><i class="fas fa-shopping-cart me-1"></i> Thêm</button>
+                <button class="btn btn-outline-danger btn-sm rounded-pill"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thêm 3 iPhone nữa (14 Pro Max, 13, SE) -->
+        <div class="col">
+          <div class="product-card bg-white rounded-3 shadow-sm overflow-hidden border-0 transition hover-lift">
+            <div class="product-badge bg-success text-white position-absolute top-0 start-0 m-2 px-2 py-1 rounded-pill small fw-bold">NEW</div>
+            <div class="product-image position-relative overflow-hidden">
+              <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1592750477367-5e7b3d29e6b7?w=500" class="img-fluid transition" alt="iPhone 15 Pro"></a>
+              <button class="quick-view position-absolute bottom-0 start-50 translate-middle-x btn btn-light btn-sm rounded-pill shadow-sm"><i class="fas fa-eye"></i></button>
+            </div>
+            <div class="product-info p-3">
+              <h3 class="fs-6 fw-bold mb-1 text-truncate">iPhone 15 Pro 128GB</h3>
+              <div class="product-rating mb-1 small text-warning">
+                ★★★★☆ <span class="text-muted">(189)</span>
+              </div>
+              <div class="product-price mb-2">
+                <span class="price-new fs-5 text-danger fw-bold">24.990.000₫</span>
+              </div>
+                <div class="d-flex gap-1">
+                <button class="btn btn-primary flex-grow-1 btn-sm rounded-pill"><i class="fas fa-shopping-cart me-1"></i> Thêm</button>
+                <button class="btn btn-outline-danger btn-sm rounded-pill"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="product-card bg-white rounded-3 shadow-sm overflow-hidden border-0 transition hover-lift">
+            <div class="product-badge bg-success text-white position-absolute top-0 start-0 m-2 px-2 py-1 rounded-pill small fw-bold">NEW</div>
+            <div class="product-image position-relative overflow-hidden">
+              <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1592750477367-5e7b3d29e6b7?w=500" class="img-fluid transition" alt="iPhone 15 Pro"></a>
+              <button class="quick-view position-absolute bottom-0 start-50 translate-middle-x btn btn-light btn-sm rounded-pill shadow-sm"><i class="fas fa-eye"></i></button>
+            </div>
+            <div class="product-info p-3">
+              <h3 class="fs-6 fw-bold mb-1 text-truncate">iPhone 15 Pro 128GB</h3>
+              <div class="product-rating mb-1 small text-warning">
+                ★★★★☆ <span class="text-muted">(189)</span>
+              </div>
+              <div class="product-price mb-2">
+                <span class="price-new fs-5 text-danger fw-bold">24.990.000₫</span>
+              </div>
+                <div class="d-flex gap-1">
+                <button class="btn btn-primary flex-grow-1 btn-sm rounded-pill"><i class="fas fa-shopping-cart me-1"></i> Thêm</button>
+                <button class="btn btn-outline-danger btn-sm rounded-pill"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+
+      <!-- Samsung Galaxy -->
+      <div class="section-header mb-4 d-flex justify-content-between align-items-center">
+        <h2 class="d-flex align-items-center text-success">
+          <i class="fab fa-android me-2 fs-3"></i> Samsung Galaxy
+        </h2>
+        <a href="#samsungList" class="text-decoration-none text-success fw-bold">Xem tất cả →</a>
+      </div>
+      <div class="product-grid row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4 mb-5" id="samsungList">
+        <!-- 5 Samsung -->
+        <div class="col">
+          <div class="product-card bg-white rounded-3 shadow-sm overflow-hidden border-0 transition hover-lift">
+            <div class="product-badge bg-warning text-dark position-absolute top-0 start-0 m-2 px-2 py-1 rounded-pill small fw-bold">-18%</div>
+            <div class="product-image position-relative overflow-hidden">
+              <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d1?w=500" class="img-fluid transition" alt="S24 Ultra"></a>
+              <button class="quick-view position-absolute bottom-0 start-50 translate-middle-x btn btn-light btn-sm rounded-pill shadow-sm"><i class="fas fa-eye"></i></button>
+            </div>
+            <div class="product-info p-3">
+              <h3 class="fs-6 fw-bold mb-1 text-truncate">Galaxy S24 Ultra 512GB</h3>
+              <div class="product-rating mb-1 small text-warning">
+                ★★★★★ <span class="text-muted">(456)</span>
+              </div>
+              <div class="product-price mb-2">
+                <span class="price-new fs-5 text-danger fw-bold">27.990.000₫</span>
+                <span class="price-old text-muted small text-decoration-line-through ms-1">33.990.000₫</span>
+              </div>
+              <div class="d-flex gap-1">
+                <button class="btn btn-primary flex-grow-1 btn-sm rounded-pill"><i class="fas fa-shopping-cart me-1"></i> Thêm</button>
+                <button class="btn btn-outline-danger btn-sm rounded-pill"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thêm 4 Samsung nữa -->
+        <div class="col">
+          <div class="product-card bg-white rounded-3 shadow-sm overflow-hidden border-0 transition hover-lift">
+            <div class="product-badge bg-warning text-dark position-absolute top-0 start-0 m-2 px-2 py-1 rounded-pill small fw-bold">-18%</div>
+            <div class="product-image position-relative overflow-hidden">
+              <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d1?w=500" class="img-fluid transition" alt="S24 Ultra"></a>
+              <button class="quick-view position-absolute bottom-0 start-50 translate-middle-x btn btn-light btn-sm rounded-pill shadow-sm"><i class="fas fa-eye"></i></button>
+            </div>
+            <div class="product-info p-3">
+              <h3 class="fs-6 fw-bold mb-1 text-truncate">Galaxy S24 Ultra 512GB</h3>
+              <div class="product-rating mb-1 small text-warning">
+                ★★★★★ <span class="text-muted">(456)</span>
+              </div>
+              <div class="product-price mb-2">
+                <span class="price-new fs-5 text-danger fw-bold">27.990.000₫</span>
+                <span class="price-old text-muted small text-decoration-line-through ms-1">33.990.000₫</span>
+              </div>
+              <div class="d-flex gap-1">
+                <button class="btn btn-primary flex-grow-1 btn-sm rounded-pill"><i class="fas fa-shopping-cart me-1"></i> Thêm</button>
+                <button class="btn btn-outline-danger btn-sm rounded-pill"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="product-card bg-white rounded-3 shadow-sm overflow-hidden border-0 transition hover-lift">
+            <div class="product-badge bg-warning text-dark position-absolute top-0 start-0 m-2 px-2 py-1 rounded-pill small fw-bold">-18%</div>
+            <div class="product-image position-relative overflow-hidden">
+              <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d1?w=500" class="img-fluid transition" alt="S24 Ultra"></a>
+              <button class="quick-view position-absolute bottom-0 start-50 translate-middle-x btn btn-light btn-sm rounded-pill shadow-sm"><i class="fas fa-eye"></i></button>
+            </div>
+            <div class="product-info p-3">
+              <h3 class="fs-6 fw-bold mb-1 text-truncate">Galaxy S24 Ultra 512GB</h3>
+              <div class="product-rating mb-1 small text-warning">
+                ★★★★★ <span class="text-muted">(456)</span>
+              </div>
+              <div class="product-price mb-2">
+                <span class="price-new fs-5 text-danger fw-bold">27.990.000₫</span>
+                <span class="price-old text-muted small text-decoration-line-through ms-1">33.990.000₫</span>
+              </div>
+              <div class="d-flex gap-1">
+                <button class="btn btn-primary flex-grow-1 btn-sm rounded-pill"><i class="fas fa-shopping-cart me-1"></i> Thêm</button>
+                <button class="btn btn-outline-danger btn-sm rounded-pill"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="product-card bg-white rounded-3 shadow-sm overflow-hidden border-0 transition hover-lift">
+            <div class="product-badge bg-warning text-dark position-absolute top-0 start-0 m-2 px-2 py-1 rounded-pill small fw-bold">-18%</div>
+            <div class="product-image position-relative overflow-hidden">
+              <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d1?w=500" class="img-fluid transition" alt="S24 Ultra"></a>
+              <button class="quick-view position-absolute bottom-0 start-50 translate-middle-x btn btn-light btn-sm rounded-pill shadow-sm"><i class="fas fa-eye"></i></button>
+            </div>
+            <div class="product-info p-3">
+              <h3 class="fs-6 fw-bold mb-1 text-truncate">Galaxy S24 Ultra 512GB</h3>
+              <div class="product-rating mb-1 small text-warning">
+                ★★★★★ <span class="text-muted">(456)</span>
+              </div>
+              <div class="product-price mb-2">
+                <span class="price-new fs-5 text-danger fw-bold">27.990.000₫</span>
+                <span class="price-old text-muted small text-decoration-line-through ms-1">33.990.000₫</span>
+              </div>
+              <div class="d-flex gap-1">
+                <button class="btn btn-primary flex-grow-1 btn-sm rounded-pill"><i class="fas fa-shopping-cart me-1"></i> Thêm</button>
+                <button class="btn btn-outline-danger btn-sm rounded-pill"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Thương hiệu khác (Xiaomi, OPPO, Vivo...) -->
+      <div class="section-header mb-4 d-flex justify-content-between align-items-center">
+        <h2 class="d-flex align-items-center text-info">
+          <i class="fas fa-mobile-alt me-2 fs-3"></i> Thương hiệu khác
+        </h2>
+        <a href="#otherList" class="text-decoration-none text-info fw-bold">Xem tất cả →</a>
+      </div>
+      <div class="product-grid row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4 mb-5" id="otherList">
+        <!-- 5 sản phẩm -->
+        <div class="col">
+          <div class="product-card bg-white rounded-3 shadow-sm overflow-hidden border-0 transition hover-lift">
+            <div class="product-badge bg-info text-white position-absolute top-0 start-0 m-2 px-2 py-1 rounded-pill small fw-bold">GIÁ SỐC</div>
+            <div class="product-image position-relative overflow-hidden">
+              <a href="product-detail.html"><img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=500" class="img-fluid transition" alt="Xiaomi 15 Pro"></a>
+              <button class="quick-view position-absolute bottom-0 start-50 translate-middle-x btn btn-light btn-sm rounded-pill shadow-sm"><i class="fas fa-eye"></i></button>
+            </div>
+            <div class="product-info p-3">
+              <h3 class="fs-6 fw-bold mb-1 text-truncate">Xiaomi 15 Pro 5G 256GB</h3>
+              <div class="product-rating mb-1 small text-warning">
+                ★★★★★ <span class="text-muted">(789)</span>
+              </div>
+              <div class="product-price mb-2">
+                <span class="price-new fs-5 text-danger fw-bold">13.990.000₫</span>
+              </div>
+              <div class="d-flex gap-1">
+                <button class="btn btn-primary flex-grow-1 btn-sm rounded-pill"><i class="fas fa-shopping-cart me-1"></i> Thêm</button>
+                <button class="btn btn-outline-danger btn-sm rounded-pill"><i class="far fa-heart"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thêm 4 sản phẩm khác -->
+        <!-- ... -->
+      </div>
+
+      <!-- Toolbar & Pagination -->
+      <!-- <div class="products-toolbar d-flex justify-content-between align-items-center mb-4 bg-white p-3 rounded shadow-sm">
+        <span class="result-count fs-5 fw-bold">Hiển thị <span id="productCount">15</span> / 120 sản phẩm</span>
+        <div class="toolbar-right d-flex gap-2">
+          <select class="form-select rounded-pill" id="sortSelect">
+            <option value="default">Sắp xếp mặc định</option>
+            <option value="low">Giá thấp → cao</option>
+            <option value="high">Giá cao → thấp</option>
+            <option value="new">Mới nhất</option>
+          </select>
+          <button class="btn btn-outline-primary rounded-pill"><i class="fas fa-th-large"></i></button>
+          <button class="btn btn-primary rounded-pill"><i class="fas fa-th-list"></i></button>
+        </div>      
+      </div> -->
+
+      <!-- <nav aria-label="Page navigation" class="mt-4">
+        <ul class="pagination justify-content-center">
+          <li class="page-item active"><a class="page-link rounded-pill" href="#">1</a></li>
+          <li class="page-item"><a class="page-link rounded-pill" href="#">2</a></li>
+          <li class="page-item"><a class="page-link rounded-pill" href="#">3</a></li>
+          <li class="page-item"><a class="page-link rounded-pill" href="#">Sau</a></li>
+        </ul>
+      </nav> -->
+      <nav class="pagination">
+        <a class="page-link" href="#">Trước</a>
+        <a class="page-link active" href="#">1</a>
+        <a class="page-link" href="#">2</a>
+        <a class="page-link" href="#">3</a>
+        <a class="page-link" href="#">Sau</a>
+      </nav>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white py-5">
+    <div class="container">
+      <div class="row footer-top">
+        <div class="col-md-3 footer-col">
+          <h4>Về PhoneShop</h4>
+          <ul class="list-unstyled">
+            <li><a href="about-us.html" class="text-white">Giới thiệu công ty</a></li>
+            <li><a href="#" class="text-white">Tuyển dụng</a></li>
+            <li><a href="#" class="text-white">Tin tức</a></li>
+            <li><a href="#" class="text-white">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-col">
+          <h4>Chính sách</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Chính sách bảo hành</a></li>
+            <li><a href="#" class="text-white">Chính sách đổi trả</a></li>
+            <li><a href="#" class="text-white">Chính sách vận chuyển</a></li>
+            <li><a href="#" class="text-white">Chính sách bảo mật</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-col">
+          <h4>Hỗ trợ khách hàng</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Hướng dẫn mua hàng</a></li>
+            <li><a href="#" class="text-white">Hướng dẫn thanh toán</a></li>
+            <li><a href="tra_cuu_dh.html" class="text-white">Tra cứu đơn hàng</a></li>
+            <li><a href="#" class="text-white">Câu hỏi thường gặp</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 footer-col">
+          <h4>Kết nối với chúng tôi</h4>
+          <div class="social-links d-flex gap-3">
+            <a href="https://www.facebook.com/quoctri.le.319" class="text-white fs-3"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white fs-3"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@lqt254" class="text-white fs-3"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-center mt-4">
+        <p>&copy; Designer by lê quốc trí D22_TH14. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chat Widget -->
+  <div class="chat-widget position-fixed bottom-0 end-0 m-4">
+    <button class="chat-toggle btn btn-primary rounded-circle shadow-lg p-3">
+      <i class="fas fa-comments fs-4"></i>
+    </button>
+  </div>
+
+  <!-- JS của bạn -->
+  <script src="main.js"></script>
+
+  
+
+</body>
+</html>
